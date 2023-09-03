@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises and .then() .catch()</title>
+  </head>
+  <body></body>
+  <script>
+    // Promises
+    let promise1 = new Promise(function (resolve, reject) {
+      alert("I am a alert in promise1");
+      resolve(50);
+    });
+
+    console.log("Hello, I am a promise");
+    setTimeout(function () {
+      console.log("Hello world");
+    }, 2000);
+    console.log("Hello and welcome to my project");
+    console.log(promise1);
+
+    let p1 = new Promise(function (resolve, reject) {
+      console.log("Promise1 is pending");
+      setTimeout(function () {
+        console.log("Promise1 is resolved");
+        resolve(50);
+      }, 3000);
+    });
+    // console.log(p1);
+    let p2 = new Promise(function (resolve, reject) {
+      console.log("Promise2 is pending");
+      setTimeout(function () {
+        console.log("Promise2 is rejected");
+        reject(new Error ("Promise2 is rejected error found"))
+      }, 3000);
+    });
+    // console.log(p2);
+
+    // .then() and .catch()
+    
+    // p1.then(alert("Promise is in alert sections"))
+    p1.then((value)=>{
+      console.log(value);
+    })
+    p2.catch((error)=>{
+      console.log("error in Promise2");
+    })
+  </script>
+</html>

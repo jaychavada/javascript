@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Animal {
+        constructor(name,color){
+            this.name = name;
+            this.color = color;
+        }
+        details(){
+            console.log("Name of animal is "+this.name+ ", color is "+this.color);
+        }
+    }
+    class Next extends Animal {
+        eat() {
+            console.log(`Animal ${this.name} has ${this.color} color and it is eating`);
+        }
+    }
+
+    let a = new Animal("Bruno","Brown");
+    let b = new Next("Tommy","Black");
+
+    a.details();
+
+    b.details();
+    b.eat();
+</script>
+</html>

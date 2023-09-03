@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor</title>
+  </head>
+  <body></body>
+  <script>
+    class RailwayForm {
+      constructor(name, trainno, address) {
+        console.log("Constructor called for " + name + " " + trainno);
+        this.name = name;
+        this.trainno = trainno;
+        this.address = address;
+      }
+      preview() {
+        alert(
+          this.name +
+            ": Form is for Train Number: " +
+            this.trainno +
+            " and Address: " +
+            this.address
+        );
+      }
+      submit() {
+        alert(this.name + ": Form Submitted for Train Number: " + this.trainno);
+      }
+      cancel() {
+        this.trainno = 0;
+        alert(this.name + ": Form cancelled for Train number: " + this.trainno);
+      }
+    }
+    // Create & fill a form for h1
+    let jack = new RailwayForm("Jack", 120456, "Hogwarts school- 09/5 boy");
+
+    // Create & fill a form for h2
+    let hermione = new RailwayForm(
+      "Hermione",
+      563198,
+      "Hogwarts school-09/5 girl"
+    );
+
+    jack.preview();
+    hermione.preview();
+    jack.submit();
+    hermione.cancel();
+  </script>
+</html>

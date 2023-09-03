@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice set ch 08</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      .bulb {
+        height: 350px;
+        width: 350px;
+        background: yellow;
+      }
+      .bulb-container {
+        height: 350px;
+        width: 350px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="alert('Bugati chiron is ready to go')">Bugati</button>
+    <button onclick="alert('Lemborghini aventador is ready to go')">
+      lembo
+    </button>
+    <button onclick="alert('BMW x40 is ready to go')">BMW</button>
+
+    <h1>Bookmarks</h1>
+    <!-- <a href="https://google.com"><button id="google">Google</button></a> -->
+    <!-- <a href="https://facebook.com"><button id="fb">facebook</button></a> -->
+    <!-- <a href="https://youtube.com"><button id="yt">Youtube</button></a> -->
+    <!-- <a href="https://instagram.com"><button id="ig">Instagram</button></a> -->
+
+    <!-- without href tag -->
+    <button id="google">Google</button>
+    <button id="fb">facebook</button>
+    <button id="yt">Youtube</button>
+    <button id="ig">Instagram</button>
+
+    <div id="bulb" class="bulb-container bulb"></div>
+  </body>
+  <script>
+    document.getElementById("google").addEventListener("click", function (e) {
+      let url = "http://www.google.com";
+      window.location = "http://www.google.com";
+    });
+    document.getElementById("fb").addEventListener("click", function (e) {
+      let url = "http://www.facebook.com";
+      window.location = "http://www.facebook.com";
+    });
+    document.getElementById("yt").addEventListener("click", function (e) {
+      let url = "http://www.youtube.com";
+      window.location = "http://www.youtube.com";
+    });
+    document.getElementById("ig").addEventListener("click", function (e) {
+      let url = "http://www.instagram.com";
+      window.location = "http://www.instagram.com";
+    });
+
+    // bulb
+    setInterval(async function () {
+      document.querySelector("#bulb").classList.toggle("bulb");
+    }, 200);
+  </script>
+</html>

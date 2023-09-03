@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overriding</title>
+  </head>
+  <body></body>
+  <script>
+    class Employee {
+      constructor(name) {
+        console.log(`Name of employee: ${name}`);
+        this.name = name;
+      }
+      login() {
+        console.log(`Employee has logged in.`);
+      }
+      logout() {
+        console.log(`Employee has logged out.`);
+      }
+      requestLeaves(leaves) {
+        console.log(
+          `Employee has requested for ${leaves} days leaves - Auto Approved.`
+        );
+      }
+    }
+
+    class Programmer extends Employee {
+      // this constructor will be called automatically when child class is called and it has no constructor
+      // constructor(...args) {
+      //     super(...args);
+      // }
+      coffee(x) {
+        console.log(`Programmer has requested for ${x} coffee`);
+      }
+      //   super keyword
+      requestLeaves(leaves) {
+        //     console.log(`Employee has requested for ${leaves} days leaves and company provides ${leaves + 1} days leaves`);
+        super.requestLeaves(leaves);
+        console.log(
+          `We are giving you one Extra leaves Total ${
+            leaves + 1
+          } days leaves grants`
+        );
+      }
+    }
+    let e = new Programmer("Tej");
+    e.login();
+    e.requestLeaves(3);
+  </script>
+</html>

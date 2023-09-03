@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom error</title>
+</head>
+<body>
+    <h2>Custom error</h2>
+</body>
+<script>
+    try {
+        let age = prompt("Enter your age")
+        age = Number.parseInt(age);
+        if(age > 150)
+        // custom error
+            throw new ReferenceError("This is not right. Please enter a valid age.");
+    } catch (error) {
+        console.log(error.name)
+        console.log(error.message)
+        console.log(error.stack)
+    }
+    console.log("End of script")
+</script>
+</html>

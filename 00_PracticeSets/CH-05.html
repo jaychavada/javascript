@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PracticeSet 05</title>
+  </head>
+  <body>
+    <h2>PracticeSet 05</h2>
+    <script>
+      // que 01
+      let arr = [1, 2, 3, 4, 5];
+      let a = prompt("Enter a number");
+      a = Number.parseInt(a);
+      arr.push(a);
+      console.log(arr);
+
+      // que 02
+      let arr1 = [11, 12, 13, 14, 15];
+      let a1;
+      do {
+        a1 = prompt("Enter a number");
+        a1 = Number.parseInt(a1);
+        arr1.push(a1);
+      } while (a1 != 0);
+      console.log(arr1);
+
+      //que 03
+      let arr2 = [10, 12, 13, 14, 15];
+      let f = arr2.filter((value) => {
+        return value % 2 == 0;
+      });
+      console.log(f);
+
+      //que 04
+      let arr3 = [10, 12, 13, 14, 15];
+      let m = arr2.map((x) => {
+        return x * x;
+      });
+      console.log(m);
+
+      //que 05
+      let arr4 = [1, 2, 3, 4, 5];
+      let r = arr4.reduce((x1, x2) => {
+        return x1 * x2;
+      });
+      console.log(r);
+    </script>
+  </body>
+</html>

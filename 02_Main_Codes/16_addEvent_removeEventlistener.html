@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>addEvent_removeEventlistener</title>
+  </head>
+  <body>
+    <div>
+      <button id="btn">Click Me</button>
+    </div>
+  </body>
+  <script>
+    // Note: removeEventListener will work only when both fuction have same function object
+    let x = function (e) {
+      alert("Hello!");
+      console.log(e.type, e.clientX, e.clientY);
+    };
+
+    let y = function (e) {
+      alert("Hello world!");
+    };
+
+    btn.addEventListener("click", x);
+    btn.addEventListener("click", y);
+
+    let a = prompt("what is your fav number?");
+    if (a == "7") {
+      btn.removeEventListener("click",y);
+    }
+  </script>
+</html>

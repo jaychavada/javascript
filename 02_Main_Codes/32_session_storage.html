@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+</head>
+<body>
+    <h1>Session Storage</h1>
+</body>
+<script>
+    //Data will be erased stored no matter if we load this site in new tabs
+    sessionStorage.setItem("name","jay");
+    sessionStorage.removeItem("name")
+    sessionStorage.clear();
+
+    // Storge Event
+    // it will trigger when we update the local storage or session storage
+    window.onstorage = (e) => {
+        alert("changed storage");
+        console.log(e)
+    }
+</script>
+</html>

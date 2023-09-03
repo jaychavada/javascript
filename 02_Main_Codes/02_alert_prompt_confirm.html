@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert_prompt_confirm</title>
+  </head>
+  <body>
+    <h2>Alert_prompt_confirm</h2>
+    <script>
+      alert("Enter value of a");
+      let a = prompt("Enter value here:", "456"); //also apply default value in prompt like her is 456
+      a = Number.parseInt(a);
+      alert("Type of a is " + typeof a);
+      let write = confirm("Do you want to write it into the page?");
+      if (write) {
+        document.write("Value of a is:", a);
+      } else {
+        document.write("allow me to write");
+      }
+    </script>
+  </body>
+</html>

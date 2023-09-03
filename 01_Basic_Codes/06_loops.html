@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06_loops</title>
+  </head>
+  <body>
+    <h2>Lets continue with Loops in JavaScript</h2>
+    <script>
+      // for loop
+      let sum = 0;
+      let n = prompt("Value of n:");
+      n = Number.parseInt(n);
+      for (let i = 0; i < n; i++) {
+        sum += i + 1;
+      }
+      console.log("Sum of first " + n + " natural numbers is " + sum);
+      // for in loop
+      let obj = {
+        jay: 90,
+        arun: 95,
+        kanbha: 85,
+        dharmik: 88,
+      };
+      for (let i in obj) {
+        console.log("Marks of " + i + " are " + obj[i]);
+      }
+      // for of loop
+      for (let a of "jay") {
+        console.log(a);
+      }
+      // while loop
+      let c = prompt("in While loop: Value of n:");
+      c = Number.parseInt(c);
+      let d = 0;
+      while (d < c) {
+        console.log(d);
+        d++;
+      }
+      //do--while loop
+      let e = prompt("in do-While loop: Value of n:");
+      e = Number.parseInt(c);
+      let j = 0;
+      do {
+        console.log(j);
+        j++;
+      } while (j < e);
+    </script>
+  </body>
+</html>

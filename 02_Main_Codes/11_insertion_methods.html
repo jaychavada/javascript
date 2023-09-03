@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Methods</title>
+</head>
+<body>
+    Starting of this container (Outer)
+    <div class="container">
+        Starting of this container (inner)
+        <div id="first">I am a first element</div>
+        Starting of this container (inner)
+    </div>
+    Starting of this container (Outer)
+</body>
+<script>
+    let a = document.getElementsByTagName('div')[0]
+    a.innerHTML = a.innerHTML + '<h1>Hello world!</h1>';
+
+    // Insertion Methods:
+    let div = document.createElement('div');
+    div.innerHTML = '<h2>Hello folks!</h2>';
+    // a.appendChild(div);
+    // a.append(div);
+    // a.prepend(div);
+    // a.before(div);
+    // a.after(div)
+    a.replaceWith('div');
+    
+</script>
+</html>

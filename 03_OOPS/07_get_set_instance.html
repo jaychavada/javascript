@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get-Set-Instanceof</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Person {
+        constructor(name){
+            this._name = name;
+        }
+        flight(){
+            console.log("I have a flight");
+        }
+        get name(){
+            return this._name;
+        }
+        set name(newName){
+            this._name = newName;
+        }
+    }
+
+    let a = new Person("Jay");
+    a.flight();
+    console.log(a.name);
+    a.name = "Tej"
+    console.log(a.name);
+    let c =45;
+    // Instanceof checks object is of class or not
+    console.log(a instanceof Person);
+    console.log(c instanceof Person);
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Perfect Number Game</title>
+  </head>
+  <body>
+    <h2>Computer will choose random number and then user will enter new number and compare it with comp's random number and if it is equal then it will show,Congratulations! You guessed it right.</h2>
+    
+    <script>
+      let comp = Math.random() * 100;
+      comp = Number.parseInt(comp);
+      let user;
+      let score = 100;
+      while (user != 0) {
+        score = score - 1;
+        user = prompt("Enter the Number: ");
+        if (user == comp) {
+          console.log("Congratulations! You guessed it right.");
+          console.log(`You guessed the number after ${100 - score} attempt`);
+        } else if (user > comp && user < 100) {
+          console.log("You number is greater than actual number.");
+        } else if (user < comp && user > 0) {
+          console.log("You number is smaller than actual number.");
+        } else {
+          console.log("Enter Number between 1 to 100");
+        }
+      }
+    </script>
+  </body>
+</html>

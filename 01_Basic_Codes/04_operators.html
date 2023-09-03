@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04_operators</title>
+  </head>
+  <body>
+    <h2>Operators in JavaScript</h2>
+    <script>
+      console.log("Operators in JS:");
+      let a = 57;
+      let b = 3;
+
+      // Arithmetic Operators
+      console.log("a + b = ", a + b);
+      console.log("a - b = ", a - b);
+      console.log("a * b = ", a * b);
+      console.log("a / b = ", a / b);
+      console.log("Power operator: a ** b = ", a ** b);
+      console.log("Modulo operator: a % b = ", a % b);
+      console.log("Before Increment operator: a = ", a++);
+      console.log("After Increment operator: a++ = ", a);
+      console.log("Before Increment operator: a = ", a++);
+      console.log("After Increment operator: a++ = ", a);
+      console.log("Before Decrement operator: b-- = ", b--);
+      console.log("After Decrement operator: b-- = ", b);
+
+      // Assignment Operators
+      let assignment = 1;
+      assignment += 5;
+      console.log(assignment);
+
+      // Comparison Operators
+      let com1 = 6;
+      let com2 = "6";
+      console.log("comp1 == comp2 is", com1 == com2);
+      console.log("comp1 != comp2 is", com1 != com2);
+      // Unique Comparison Operators --> this will check type of variable
+      console.log("comp1 === comp2 is", com1 === com2);
+      console.log("comp1 !== comp2 is", com1 !== com2);
+
+      // Logical Operators
+      let l1 = 5;
+      let l2 = 6;
+      console.log("Logical AND", l1 < l2 && l1 == 5); // BOTH condition Has to be TRUE
+      console.log("Logical OR", l1 > l2 || l1 == 5); // One condition Has to be TRUE
+      console.log(!false);
+    </script>
+  </body>
+</html>

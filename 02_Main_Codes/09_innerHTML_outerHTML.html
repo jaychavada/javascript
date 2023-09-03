@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML and outerHTML</title>
+</head>
+<body>
+     i am jay
+     <span id="first" hidden><b>i am span</b></span>
+</body>
+<script>
+    console.log(document.getElementsByTagName('span')[0])
+    console.dir(document.getElementsByTagName('span')[0])
+
+    console.log(document.body.firstChild.nodeName)
+    console.log(document.body.firstElementChild.nodeName)
+
+    let x = document.getElementsByTagName('span')[0]
+    console.log(x)
+
+    let y = document.getElementsByTagName('span')[0]
+    console.dir(y) 
+
+    console.log(first.innerHTML) 
+    console.log(first.outerHTML)
+    console.log(document.body.textContent) 
+</script>
+</html> 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02_var_let-const</title>
+  </head>
+  <body>
+    <h2>var-let-const in JavaScript</h2>
+    <script>
+      var a = 45;
+      var b = "hermione";
+      b = "gryfindor"; //it will just update the vale of b
+      var c = null;
+      var d = undefined;
+      const author = "dumbbledore"; // constant cant be changed
+      {
+        // using let we can create variable in block also
+        let b = "this";
+        console.log(b);
+      }
+      console.log(b);
+      console.log(author);
+    </script>
+  </body>
+</html>

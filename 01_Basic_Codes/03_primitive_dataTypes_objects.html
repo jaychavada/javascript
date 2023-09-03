@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03_primitive_datatypes_objects</title>
+  </head>
+  <body>
+    <h2>Primitive_datatypes_objects in JavaScript</h2>
+    <script>
+      /* 
+    7 types of Primitive data-types 
+    
+        N NULL
+        N NUMBER
+        S SYMBOL
+        S STRING
+        B BOOLEAN
+        B BIGINT
+        U UNDEFIND
+    */
+
+      let a = null;
+      let b = 345;
+      let c = true; //boolean
+      let d = BigInt("445") + BigInt("5");
+      let e = "Jay";
+      let f = Symbol("This is symbol");
+      let g = undefined;
+      console.log(a, b, c, d, e, f, g);
+      console.log("Type of d is", typeof d);
+
+      // Non Primitive data-types- objects in JS
+      const item = {
+        jay: true,
+        hermione: true,
+        millie: false,
+        Raj: undefined,
+      };
+      console.log(item["jay"]);
+    </script>
+  </body>
+</html>

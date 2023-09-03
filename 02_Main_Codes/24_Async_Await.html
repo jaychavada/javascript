@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await</title>
+  </head>
+  <body></body>
+  <script>
+    //  Async initialization will return promise
+    async function weather() {
+      let delhiWeather = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("27 degrees");
+        }, 2000);
+      });
+      let bangloreWeather = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("30 degrees");
+        }, 4000);
+      });
+      //   delhiWeather.then(alert)
+      //   bangloreWeather.then(alert)
+      console.log("Fatching delhi weather...");
+      let delhiw = await delhiWeather;
+      console.log("Fatched delhi weather..." + delhiw);
+      console.log("Fatching banglore weather...");
+      let bangw = await bangloreWeather;
+      console.log("Fatched banglore weather..." + bangw);
+      return [delhiw, bangw];
+    }
+
+    const wind = async () => {
+      console.log("wind...");
+    };
+    const rain = async () => {
+      console.log("rain...");
+    };
+
+    const run = async () => {
+      console.log("welcome to weather service");
+      let w = await weather();
+      let s = await wind();
+      let r = await rain();
+    };
+
+    run();
+  </script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays in JavaScript</title>
+  </head>
+  <body>
+    <h2>Arrays in JavaScript</h2>
+    <script>
+/*       let a = [12, 35, "Jay", false, true];
+      console.log(a);
+      console.log(a[0]);
+      console.log(a[1]);
+      console.log(a[2]);
+      console.log(a[5]);
+      console.log("length", a.length);
+      a[5] = 235; // added new value in array
+      console.log(a[5]);
+
+      // *******************ARRAY METHODS*******************
+      let num = [16, 92, 3, 354, 45];
+      let nums = [51, 55, 9, "JC", "AK", 8];
+
+      let b = num.toString(); // b is now string
+      console.log(b, typeof b);
+
+      let c = num.join("_");
+      console.log(c, typeof c);
+
+      let r = num.pop(); //pop returns the removes element
+      console.log(num, r);
+
+      let p = num.push(126); // push add element and gives new length of array
+      console.log(num, p);
+
+      let s = num.shift(); // removes 1st element and return it
+      console.log(num, s);
+
+      let us = num.unshift(99); // add element to 1st in array and return length
+      console.log(num, us);
+      
+      delete num[0]; // just delete element and not affecting length of array
+      console.log(num);
+      
+      let newArray = num.concat(nums);
+      console.log(newArray); 
+
+      let compare = (a, b) => {
+        return a - b;
+      };
+      num.sort(); // sort method run considering elements in array as a STRING arguments
+      num.sort(compare);
+      console.log(num);
+      
+      num.reverse()
+      console.log(num); 
+      num.splice(2, 3, 66, 77, 88); //starts from index 2 removing 3 elements and adding 66,77,88
+      console.log(num);
+
+      let newNum = num.slice(3)
+      console.log(newNum);
+*/
+      // *******************ARRAY LOOPS*******************
+      let num = [1, 2, 3, 4, 5];
+      for (let i = 0; i < num.length; i++) {
+        console.log(num[i]);
+      }
+      // forEach
+      num.forEach((element) => {
+        console.log(element * element);
+      });
+      // Array.from
+      let name = "hermione";
+      let arr = Array.from(name);
+      console.log(arr);
+      // for...of --> this will print elements of array
+      for(let item of num){
+        console.log(item)
+      }
+      // for...in --> this will give you a value of keys or index in array
+      for(let i in num){
+        console.log(i)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walking DOM</title>
+  </head>
+  <body>
+    <div>
+      <div class="first">first</div>
+      <div class="second">second</div>
+    </div>
+    <!-- <h2>Walking DOM</h2>
+    <div>
+      <p>This is for child tags parents and siblings</p>
+      <span>siblings</span>
+    </div> -->
+    <script>
+      // CHILD in javascript
+      // CHILD in javascript
+      console.log(document.body);
+      console.log(document.body.firstChild);
+      console.log(document.body.lastChild);
+      // console.log(document.body.childNodes); --> this is node list
+      let arr = Array.from(document.body.childNodes);
+      console.log(arr); // this is now array
+
+      // Parents and siblings in javascript
+      console.log(document.body.firstChild);
+      a = document.body.firstChild;
+      console.log(a.parentNode);
+      console.log(a.parentElement);
+      console.log(document.firstChild.nextSibling);
+    </script>
+  </body>
+</html>

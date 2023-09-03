@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClassList and ClassName</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      .red {
+        background-color: red;
+        color: black;
+      }
+      .yellow {
+        background-color: yellow;
+        color: red;
+      }
+      .text-dark {
+        color: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hell" class="yellow text-dark">
+      <span>Lucifer MorningStar</span>
+    </div>
+  </body>
+  <script>
+    hell.className = "text-black red";
+    console.log(hell.classList);
+    hell.classList.remove("red");
+    console.log(hell.classList);
+    hell.classList.add("purple");
+    console.log(hell.classList);
+
+    // toggle method for continue removing and adding classes
+    hell.classList.toggle("red");
+    // checking class is available or not available
+    hell.classList.contains("purple");
+  </script>
+</html>

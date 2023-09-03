@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise API</title>
+  </head>
+  <body></body>
+  <script>
+    let promise1 = new Promise(function (resolve, reject) {
+      setTimeout(() => {
+        resolve("value1");
+      }, 6000);
+    });
+    let promise2 = new Promise(function (resolve, reject) {
+      setTimeout(() => {
+        // resolve("value2");
+        reject(new Error("error2"));
+      }, 2000);
+    });
+    let promise3 = new Promise(function (resolve, reject) {
+      setTimeout(() => {
+        resolve("value3");
+      }, 3000);
+    });
+
+    // promise1.then((value) => {
+    //     console.log(value);
+    // })
+    // promise2.then((value) => {
+    //     console.log(value);
+    // })
+    // promise3.then((value) => {
+    //     console.log(value);
+    // })
+
+// ******************************** PROMISE API ********************************
+    // let promise_all = Promise.all([promise1, promise2, promise3]) // value in array
+    // let promise_all = Promise.allSettled([promise1, promise2, promise3]) // value with status
+    // let promise_all = Promise.race([promise1, promise2, promise3]) // gives first value which is executes first
+    // let promise_all = Promise.resolve(6)
+    // let promise_all = Promise.reject(new Error('Invalid')) // throws exception
+    let promise_all = Promise.any([promise1, promise2, promise3]) // gives value which is resolved no matter which value has been rejected it will gives output
+    promise_all.then((values) => { 
+      console.log(values);
+    });
+  </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setInterval_setTimeout</title>
+  </head>
+  <body></body>
+  <script>
+    document.write("Hello, world!");
+
+    // let a = setTimeout(function () {
+    //   alert("Hello after 200ms of time function");
+    // }, 200);
+    // console.log(a);
+
+    let b = prompt("Do you want to run setTimeout?");
+    if (b == "yes") {
+      setTimeout(function () {
+        alert("Hello after 100ms of time function");
+      }, 100);
+    } else if (b == "no") {
+      clearTimeout(b); //This will stop the timer
+    }
+
+    // Using setTimeout as a function
+    const sum = (a, b) => {
+      console.log("sum is:", a + b);
+    };
+    setTimeout(sum, 100, 12, 8);
+    /*
+    setInterval(function () {
+        alert("Interval section")
+        }, 2000) */
+  </script>
+</html>

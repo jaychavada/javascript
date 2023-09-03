@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings in JavaScript</title>
+  </head>
+  <body>
+    <h2>Strings in JavaScript</h2>
+    <script>
+      let str = "Jay";
+      console.log("Length of string ", str.length);
+      console.log(str[0]);
+      console.log(str[1]);
+      console.log(str[2]);
+      
+      // Template Literals---- String interPolation
+      let b1 = "Jack";
+      let b2 = "Dominic";
+      let sentence = `${b2} is a friend of ${b1}`; //backtick(``) use in strings
+      console.log(sentence);
+      
+      //Escape Sequence Characters
+      let h = "jay's friend";
+      console.log(h);
+      
+      // STRING METHOD
+      let name = "DominicTorreto";
+      let skill = "racingKing"
+      
+      console.log(name.length);
+      console.log(name.toUpperCase());
+      console.log(name.toLowerCase());
+      console.log(name.slice(0,7));
+      console.log(name.slice(5))
+      console.log(name.replace("Dominic","Brian"))
+      console.log(name.concat(" is ",skill))
+      console.log(name[0]);
+      
+    </script>
+  </body>
+</html>
